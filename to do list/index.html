@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toudou liste</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Section pour le titre, l'input des taches, le menu pour choisir la categorie(la personne) et le drag and drop -->
+    <section>
+            <div class="t1">
+                <h1>To do list</h1>
+            </div>
+             <div class="liste" draggable="true" ondragstart="drag(event)">
+                <input class="task" placeholder="Tâches (pistaches)" type="text" id="task_box">
+                <button id="btn">+</button>    
+                <div class="select">
+                        <select name="slct" id="slct">
+                            <option value="1">Lucas</option>
+                            <option value="2">Maxime</option>
+                            <option value="3">Ismail</option>
+                            <option value="4">Axel</option>
+                        </select>
+                    </div>
+                
+            </div>
+        </section>
+                    <!-- Section pour contenaire des taches + drop event -->
+        <section class="flexboxes">
+            <div class="boxe_lucas" id="lucas" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h1>Lucas</h1>
+            </div>
+            <div class="boxe_maxime" id="maxime" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h1>Maxime</h1>
+            </div>
+            <div class="boxe_ismail" id="ismail" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h1>Ismail</h1>
+            </div>
+            <div class="boxe_axel" id="axel" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h1>Axel</h1>
+            </div>
+            
+        </section>
+        
+<script src="/script.js"></script>
+</body>
+</html>
